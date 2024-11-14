@@ -1,3 +1,9 @@
+/*
+Nome: Lucas Blanger
+Disciplina: Laboratório de Programação
+Trabalho 2 - Campeonato Brasileiro
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -112,7 +118,6 @@ void narrarEvento(Campeonato *c, int partidaIndex, int minuto, char evento[]) {
             strcpy(e->evento, evento);
             p->totalEventos++;
             
-            // Processa o evento para atualizar estatísticas
             if (strstr(evento, "Gol de") != NULL) {
                 char nomeJogador[50];
                 sscanf(evento, "Gol de %49[^\n]", nomeJogador);
@@ -148,7 +153,6 @@ void narrarEvento(Campeonato *c, int partidaIndex, int minuto, char evento[]) {
     }
 }
 
-// Relatórios
 void imprimirRelatorioClassificacao(Campeonato *c) {
     printf("Classificação Geral:\n");
     for (int i = 0; i < c->totalTimes; i++) {
