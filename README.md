@@ -1,52 +1,46 @@
-## Campeonato Brasileiro - Sistema de Gerenciamento de Times e Partidas
+# Campeonato Brasileiro - Team and Match Management System
+## About the Project
 
-## Sobre o Projeto
+This is a system written in C, developed as part of an assignment for the Programming Lab course. The goal is to simulate the management of a football championship, allowing the registration of teams, players, matches, and events occurring during the matches. Additionally, the system generates detailed reports on the general standings, top scorers, and team statistics.
 
-Este é um sistema em C desenvolvido como parte de um trabalho para a disciplina de Laboratório de Programação. O objetivo é simular a gestão de um campeonato de futebol, permitindo o cadastro de times, jogadores, partidas e eventos ocorridos durante as partidas. Além disso, o sistema gera relatórios detalhados sobre a classificação geral, artilharia e estatísticas dos times.
+## Features
 
-## Funcionalidades
+### Team Management
+- Register new teams with basic information (name and state).
+- Remove registered teams.
+- Search for teams by name.
 
-1. Gerenciamento de Times
+### Player Management
+- Register players associated with a team.
+- Remove specific players.
+- Search for players by name.
 
-    -  Cadastro de novos times com informações básicas (nome e estado).
-    - Exclusão de times cadastrados.
-    - Consulta de times pelo nome.
+### Match Management
+- Register matches between two teams.
+- Record events during matches (goals, cards, fouls, etc.).
+- Remove registered matches.
+- Search for matches between two teams.
 
-2. Gerenciamento de Jogadores
+### Reports
+- General Standings: Goals scored and conceded by each team.
+- Top Scorers: List of players with the number of goals scored.
+- General Statistics: Fouls, yellow/red cards, and other information for each team.
 
-    - Cadastro de jogadores associados a um time.
-    - Exclusão de jogadores específicos.
-    - Consulta de jogadores pelo nome.
+### Line-up
+- Create a standard line-up for a team based on the specified number of players.
+    
+## Prerequisites for Running
 
-3. Gerenciamento de Partidas
+- Compatible C compiler (such as gcc).
+  - System supporting C99 or higher standard.
+  - Locale configured to pt_BR.UTF-8 for correct character display.
 
-    - Cadastro de partidas entre dois times.
-    - Registro de eventos durante as partidas (gols, cartões, faltas, etc.).
-    - Exclusão de partidas cadastradas.
-    - Consulta de partidas entre dois times.
+## How to Run
 
-4. Relatórios
+Compile the code using the command:
 
-    - Classificação Geral: Gols feitos e sofridos por cada time.
-    - Artilharia: Lista de jogadores com a quantidade de gols marcados.
-    - Estatísticas Gerais: Faltas, cartões amarelos/vermelhos e outras informações de cada time.
+     gcc campeonato.c -o campeonato
 
-5. Escalação
+Run the program:
 
-    - Montagem de uma escalação padrão para um time, com base no número de jogadores especificado.
-
-## Pré-requisitos para Execução
-
-  - Compilador C compatível (como gcc).
-  - Sistema com suporte ao padrão C99 ou superior.
-  - Localização configurada para pt_BR.UTF-8 para correta exibição de caracteres.
-
-## Como Executar
-
-  Compile o código utilizando o comando:
-
-    gcc campeonato.c -o campeonato
-
-  Execute o programa:
-
-    ./campeonato
+     ./campeonato
